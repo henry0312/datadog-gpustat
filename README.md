@@ -8,16 +8,19 @@ to get metrics from [NVIDIA Management Library (NVML)](https://developer.nvidia.
 ## Installation
 
 ```sh
-sudo -u dd-agent /opt/datadog-agent/embedded/bin/pip install -r requirements.txt
-sudo -u dd-agent cp -a gpu_stat.py /etc/dd-agent/checks.d/
-sudo -u dd-agent cp -a gpu_stat.yaml /etc/dd-agent/conf.d/
-sudo systemctl restart datadog-agent
+make install
 ```
 
 To test installation, run
 
 ```sh
-sudo -u dd-agent dd-agent check gpu_stat
+make check
+```
+
+If you want to uninstall, just run
+
+```sh
+make uninstall
 ```
 
 ## Licence
